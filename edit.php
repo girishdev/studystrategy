@@ -13,19 +13,19 @@
                     <form id="myForm" method="post" action="select.php">
                         <div class="form-group">
                             <label for="subtopic">Main Topic: </label>
-                            <input type="text" class="form-control" id="up_select1" name="select1" value="<? echo $rows->main_topic; ?>" id="url" placeholder="Url" />
+                            <input type="text" class="form-control" id="up_select1" name="select1" value="<?php echo $rows->main_topic; ?>" id="url" placeholder="Url" />
                         </div>
                         <div class="form-group">
                             <label for="subtopic">Sub Topic: </label>
-                            <input type="text" class="form-control" id="up_select2" name="select2" value="<? echo $rows->sub_topic; ?>" id="url" placeholder="Url" />
+                            <input type="text" class="form-control" id="up_select2" name="select2" value="<?php echo $rows->sub_topic; ?>" id="url" placeholder="Url" />
                         </div>
                         <div class="form-group">
                             <label for="subtopic">Sub Sub Topic: </label>
-                            <input type="text" class="form-control" id="up_select3" name="select3" value="<? echo $rows->sub_sub_topic; ?>" id="url" placeholder="Url" />
+                            <input type="text" class="form-control" id="up_select3" name="select3" value="<?php echo $rows->sub_sub_topic; ?>" id="url" placeholder="Url" />
                         </div>
                         <div class="form-group">
                             <label for="url">URL: </label>
-                            <input type="text" class="form-control" id="up_url" name="opturl" value="<? echo $_REQUEST['url']; ?>" id="url" placeholder="Url" />
+                            <input type="text" class="form-control" id="up_url" name="opturl" value="<?php echo $_REQUEST['url']; ?>" id="url" placeholder="Url" />
                         </div>
                         <div class="form-group">
                             <label for="description">Description</label>

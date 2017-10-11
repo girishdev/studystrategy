@@ -118,7 +118,9 @@
 			?>
 			<div id="sub_sub_topic"><?php
 				while($rows = $select->fetch_object()){
-					echo '<h5>'.$rows->sub_sub_topic . '</h5>';
+                    $select_sub_sub = $db->query("SELECT * FROM study_list WHERE sub_sub_topic='".$rows->sub_sub_topic."'");
+					echo '<div><h5 style="display: inline-block;margin-right:5px;">'.$rows->sub_sub_topic . ' </h5>';
+					echo '<span style="display: inline-block;">' . ' (' . $select_sub_sub->num_rows .')' . '</span></div>';
 				}?>
 			</div><?php
 		} else {
