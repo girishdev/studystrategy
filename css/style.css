@@ -1,0 +1,252 @@
+.container-fluid {
+	padding: 0px;
+}
+.navbar{
+	border-radius: 0px;
+	//height: 40px;
+	min-height: 40px;
+}
+.navbar-header {
+	max-height: 38px;
+}
+.navbar-nav > li > a {
+	padding: 5px 13px;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:active {
+	color: #abc;
+}
+.navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
+	color: white;
+	padding: 5px 13px;
+}
+.navbar-left {
+	margin: 2px 0px;
+}
+.navbar-collapse.collapse {
+	//height: 40px;
+	width: 100%;
+}
+.btn-primary {
+	border-radius: 3px !important;
+}
+
+.panel-body{
+	padding: 0px;
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+/* This class is in js file (tutorial.js), this is using for highlight the text */
+.imp_text {
+	color: blue !important;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+a {
+	font-size: 14px;
+}
+h5{
+	color: green;
+	font-size: 14px;
+}
+hr {
+	background-color: red;
+	color: red;
+	background: red;
+}
+
+.heading h5 {
+	margin: 0px;
+	cursor: pointer;
+	border: 1px solid #abc;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.description pre, .description{
+	margin: 0px;
+	border: 1px solid green;
+	border-radius: 5px;
+	padding: 15px;
+}
+
+.top {
+	position: fixed;
+	bottom: 50px;
+	right: 100px;
+	*background-image: url(../images/scroll-down.png) no-repeat;
+	width:100px;
+	height: 55px;
+	z-index: 999;
+	cursor: pointer;
+	display: block;	
+	background: red;
+	text-align: center;
+	border-radius: 5px;	
+}
+.top i {
+	line-height: 55px;
+	vertical-align: middle;
+	color: #fff;
+	font-size: 20px;
+}
+.image_div {
+	margin-top: 50px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.input_form {
+	margin-bottom: 20px;
+} 
+
+.displaying {
+	display: block;
+}
+
+.col-left {
+	padding-left: 0px;
+}
+.col-right {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+table tr th:nth-last-child(1),
+table tr td:nth-last-child(1){
+	/*background: pink;*/
+	width: 20px;
+}
+table tr th:nth-last-child(2),
+table tr td:nth-last-child(2){
+	/*background: green;*/
+	max-width: 40px !important;
+}
+table tr th:nth-last-child(3),
+table tr td:nth-last-child(3){
+	/*background: blue;*/
+	max-width: 40px !important;
+	word-wrap: break-word;
+}
+table tr th:nth-last-child(4),
+table tr td:nth-last-child(4){
+	/*background: yellow;*/
+	width: 20px;
+}
+table tr th:nth-last-child(5),
+table tr td:nth-last-child(5){
+	/*background: orange;*/
+	width: 20px;
+}
+table tr th:nth-last-child(6),
+table tr td:nth-last-child(6){
+	/*background: red;*/
+	width: 40px;
+}
+
+table tbody:nth-child(odd){
+	background: #abc;
+}
+
+/*
+table th:nth-last-child(1),
+table th:nth-last-child(2),
+table td:nth-last-child(1),
+table td:nth-last-child(2) {
+	width: 200px;
+	background: green;
+}
+
+table th, table td {
+	width: 40px;
+	background: red;
+}/**/
+
+#topic span, #sub_sub_topic h5 {
+	cursor: pointer;
+	color: green;
+	line-height: 30px;
+}
+#sub_sub_topic h5 {
+    margin: 0px;
+}
+#topic span:hover {
+	color: red;
+}
+
+table {
+    box-shadow: 8px 8px 15px #000;
+    font-weight: bold;
+}
+
+td .description, table {
+	border: 1px solid yellow;
+	border-radius: 0px;
+}
+
+.table {
+	border: 1px solid #000;
+    background: #fff;
+}
+
+.form-textarea {
+	margin-bottom: 20px;
+}
+
+.important-section {
+    color: red;
+}
+
+.form_content.col-md-12 {
+	padding-right:0px;
+	padding-left:0px;	
+}
+
+#select1 option, #select2 option, #select3 option {
+	padding: 5px 10px 5px 10px;
+	text-transform: uppercase;
+}
+
+/* Buttons styles */
+.edit, .move-to, .delete {
+	background: lightyellow;
+	border: 1px solid lightyellow;
+	border-radius: 5px;
+	display: block;
+	font-size: 85%;
+	padding: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+.edit:hover, .move-to:hover, .delete:hover {
+	text-decoration: none;
+	color: red;
+}
+.table > caption + thead > tr:first-child > th, .table > colgroup + thead > tr:first-child > th, 
+.table > thead:first-child > tr:first-child > th, .table > caption + thead > tr:first-child > td, 
+.table > colgroup + thead > tr:first-child > td, .table > thead:first-child > tr:first-child > td {
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: underline;
+	color: green;
+}
+
+
+@media (max-width: 768px) {
+
+	.form_content.col-md-12 {
+		padding-right:0px;
+		padding-left:0px;	
+	}
+	
+}
