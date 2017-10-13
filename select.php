@@ -43,7 +43,7 @@
 <body>
 <?php
 
-	$db = new mysqli('127.0.0.1','root','root','Mobile_StudyStrategy');
+	$db = new mysqli('127.0.0.1','root','root','studytest');
 	// $db = new mysqli('212.1.210.1','tetsi202_DBname','girish618642','tetsi202_study');
 	if($db->connect_errno){
 		echo "We found an error in DB connection";
