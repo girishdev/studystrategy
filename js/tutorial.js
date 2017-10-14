@@ -118,15 +118,11 @@ function submitform_moveto(){
 
 	var select1 = $("#select1").val();
 	var select2 = $("#select2 :selected").text();
+    var select3 = $("#select3 :selected").text();
+    var opturl = $("#url").val();
+    var description = $("#description").val();
 	var org_sub = $("#org_sub").val();
-
-	var select3 = $("#select3 :selected").text();
 	var org_sub_sub = $("#org_sub_sub").val();
-
-	var opturl = $("#url").val();
-	var org_url = $("#org_url").val();
-
-	var description = $("#description").val();
 	$.ajax({
 		url: "select.php",
 		type: "POST",
@@ -136,13 +132,11 @@ function submitform_moveto(){
 				'select3': select3,
 				'opturl_moveto': opturl,
 				'description': description,
-
 				'org_sub': org_sub,
-				'org_sub_sub': org_sub_sub,
-				'org_url': org_url
+				'org_sub_sub': org_sub_sub
 			  },
 		success: function(data){
-			$('#message').html('<div class="alert alert-success">Successfully inserted tutorial-2, Thankyou </div>');
+			$('#message').html(data);
 			window.setTimeout(function(){
 				window.location.href = "main_page.php";
 			}, 2000);
@@ -152,21 +146,13 @@ function submitform_moveto(){
 	// document.getElementById("myForm").submit();
 }
 
-// This is for Editing data
+// This is for Editing data, sending this values to select.php
 function submitformupdate(){
-
 	var select1 = $("#up_select1").val();
 	var select2 = $("#up_select2").val();
-	var org_sub = $("#org_sub").val();
-
-	var select3 = $("#up_select3").val();
-	var org_sub_sub = $("#org_sub_sub").val();
-
-	var opturl = $("#up_url").val();
-	var org_url = $("#org_url").val();
-
-	var description = $("#description").val();
-
+    var select3 = $("#up_select3").val();
+    var opturl = $("#up_url").val();
+    var description = $("#description").val();
 	$.ajax({
 		url: "select.php",
 		type: "POST",
@@ -175,25 +161,17 @@ function submitformupdate(){
 				'select2': select2,
 				'select3': select3,
 				'optur_update': opturl,
-				'description': description,
-
-				'org_sub': org_sub,
-				'org_sub_sub': org_sub_sub,
-				'org_url': org_url
-			  },
+				'description': description
+		},
 		success: function(data){
-			$('#message').html('<div class="alert alert-success">Updated Successfully tutorial-3-999, Thankyou </div>');
+			$('#message').html(data);
 			window.setTimeout(function(){
 				window.location.href = "main_page.php";
 			}, 2000);
 		}
-
 	});
-	// document.getElementById("myForm").submit();
-
 }
 
-// $('#topic h5').click(function(){
 $('#topic span').click(function(){
 	var sub_topic = $(this).text();
 	$.ajax({
@@ -250,11 +228,11 @@ function logout(){
 	}, 2000);
 }
 
-
 $(document).ready(function(){
 	scrolltop();
 	accordion();
 	checkurl();
+    to_delete();
 	// logout();
 	// select_box();
 	// second_select();
@@ -273,6 +251,6 @@ $(document).ready(function(){
 });
 
 $(window).load(function(){
-	alert('Testing..');
+	// alert('Testing..');
 	$( "#data_present4:contains('php')" ).css( "color", "yellow" );
 });

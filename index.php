@@ -1,11 +1,13 @@
 <?php
 	session_start();
-	$db = new mysqli('127.0.0.1','root','root','studytest');
-	// $db = new mysqli('212.1.210.1','tetsi202_DBname','girish618642','tetsi202_study');
-	if($db->connect_errno){
-		echo 'Error';
-		die();
-	}
+//	$db = new mysqli('127.0.0.1','root','root','studytest');
+//	// $db = new mysqli('212.1.210.1','tetsi202_DBname','girish618642','tetsi202_study');
+//	if($db->connect_errno){
+//		echo 'Error';
+//		die();
+//	}
+
+    require_once ('init/database.php');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">

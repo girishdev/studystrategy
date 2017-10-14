@@ -279,7 +279,8 @@
                     $select_sub = $db->query("SELECT DISTINCT sub_sub_topic FROM topics WHERE sub_topic='".$sub_topic."'");
                     while($rows_sub_sub = $select_sub->fetch_array()){
                         $sub_sub_topic = ucfirst($rows_sub_sub['sub_sub_topic']);
-                        echo '<h5 style="color:#0000FF;">'." - $roman_letters[$j]). ".$sub_sub_topic . '</h5>';
+                        $select_sub_sub = $db->query("SELECT * FROM study_list WHERE sub_sub_topic='".$sub_sub_topic."'");
+                        echo '<h5 style="color:#0000FF;">'." - $roman_letters[$j]). ".$sub_sub_topic . ' (' . $select_sub_sub->num_rows . ')' .'</h5>';
                         $j++;
                     }
                     $i++;

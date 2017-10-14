@@ -42,12 +42,13 @@
 
 <body>
 <?php
+//	$db = new mysqli('127.0.0.1','root','root','studytest');
+//	// $db = new mysqli('212.1.210.1','tetsi202_DBname','girish618642','tetsi202_study');
+//	if($db->connect_errno){
+//		echo "We found an error in DB connection";
+//	}
 
-	$db = new mysqli('127.0.0.1','root','root','studytest');
-	// $db = new mysqli('212.1.210.1','tetsi202_DBname','girish618642','tetsi202_study');
-	if($db->connect_errno){
-		echo "We found an error in DB connection";
-	}
+	require_once('init/database.php');
 
 	if(isset($_POST['href'])){
 		$href = $_POST['href'];
@@ -62,56 +63,50 @@
 		$sub_sub_topic = trim($_POST['select3']);
 		$url = trim($_POST['opturl']);
 		$description = trim($_POST['description']);
-		// $description = wordwrap($description, 60,"<br />\n");
         $date = date('Y-m-d h:i:sa');
 		$insert = $db->query("INSERT INTO study_list (main_topic,sub_topic,sub_sub_topic,description,url,entered_on) VALUES
 					('{$main_topic}','{$sub_topic}','{$sub_sub_topic}','{$description}','{$url}','{$date}')");
 		if($insert == true){
 			echo '<div class="alert alert-success">Successfully inserted 1 ting.., Thankyou </div>';
-			// header('Refresh: 1; url=index.php');
 		} else {
-			// die($db->error);
 			echo "<div class='alert alert-danger'>Insert Unsuccessful <b>$db->error</b></div>";
 			echo $date;
 		}
 	} elseif(isset($_POST['opturl_moveto']) && !empty($_POST['opturl_moveto'])){
-
-		$main_topic = trim($_POST['select1']);
-		$sub_topic = trim($_POST['select2']);
-		$sub_sub_topic = trim($_POST['select3']);
-		$url = trim($_POST['opturl_moveto']);
-		$description = trim($_POST['description']);
-		// $description = wordwrap($description, 60,"<br />\n");
+        // This is for Move related data, Ajax call from tutorial.js(submitform_moveto) and main request form move.php
+        $main_topic = trim($_POST['select1']);
+        $sub_topic = trim($_POST['select2']);
+        $sub_sub_topic = trim($_POST['select3']);
+        $url = trim($_POST['opturl_moveto']);
+        $description = trim($_POST['description']);
 		$org_sub = $_POST['org_sub'];
-		$org_sub_sub = $_POST['org_sub_sub'];
-		$org_url = $_POST['org_url'];
-
-		$insert = $db->query("INSERT INTO study_list (main_topic,sub_topic,sub_sub_topic,description,url) VALUES
-					('{$main_topic}','{$sub_topic}','{$sub_sub_topic}','{$description}','{$url}')");
-
-		$delete = $db->query("DELETE FROM study_list WHERE sub_topic='$org_sub' AND sub_sub_topic='$org_sub_sub' AND url='$org_url'");
+        $org_sub_sub = $_POST['org_sub_sub'];
+        $date = date('Y-m-d h:i:sa');
+        $delete = $db->query("DELETE FROM study_list WHERE sub_topic='$org_sub' AND sub_sub_topic='$org_sub_sub' AND url='$url'");
+        sleep(1);
+		$insert = $db->query("INSERT INTO study_list (main_topic,sub_topic,sub_sub_topic,description,url,entered_on) VALUES
+					('{$main_topic}','{$sub_topic}','{$sub_sub_topic}','{$description}','{$url}','{$date}')");
 
 		if($insert == true && $delete == true){
-			echo '<div class="alert alert-success">Successfully inserted 2, Thankyou </div>';
-			// header('Refresh: 1; url=index.php');
+			echo '<div class="alert alert-success">Successfully Move</div>';
 		} else {
-			// die($db->error);
-			echo "<div class='alert alert-danger'>Insert unsuccessful <b>$db->error</b></div>";
+			echo "<div class='alert alert-danger'>Move Unsuccessful<b>$db->error</b></div>";
 		}
 
 	} elseif(isset($_POST['optur_update']) && !empty($_POST['optur_update'])){
-		// This is for Editing data 
+		// This is for Updating Edited data, Ajax call from tutorial.js(submitformupdate) and main request form edit.php
 		$main_topic = $_POST['select1'];
 		$sub_topic = $_POST['select2'];
 		$sub_sub_topic = $_POST['select3'];
 		$url = trim($_POST['optur_update']);
 		$description = trim($_POST['description']);
-		$org_sub = $_POST['org_sub'];
-		$org_sub_sub = $_POST['org_sub_sub'];
-		$org_url = $_POST['org_url'];
-
 		$update = $db->query("UPDATE study_list SET main_topic='$main_topic', sub_topic='$sub_topic', sub_sub_topic='$sub_sub_topic',
-		description='$description', url='$url' WHERE sub_topic='$org_sub' AND sub_sub_topic='$org_sub_sub' AND url='$org_url'");
+		description='$description' WHERE url='$url' AND url='$url'");
+		if($update) {
+            echo '<div class="alert alert-success">Successfully updated</div>';
+        } else {
+            echo '<div class="alert alert-danger">Updated Unsuccessful!</div>';
+        }
 	}
 
 	if(isset($_POST['sub_topic'])) {
@@ -166,12 +161,10 @@
 							$description = $rows->description;
 							$description = wordwrap($description, 50,"<br />\n");
 							$htmlOut .= "<td class='box effect5'><pre class='description'>{$description}</pre></td>";
-							$htmlOut .= "<td><a class='edit' href='main_page.php?edit=edit&main_topic={$rows->main_topic}&sub_sub_topic={$rows->sub_sub_topic}&url={$rows->url}&sub_topic={$rows->sub_topic}&description={$description}'>Edit</a>";
-							$htmlOut .= "<a class='move-to' href='main_page.php?move_to=move_to&main_topic={$rows->main_topic}&sub_sub_topic={$rows->sub_sub_topic}&url={$rows->url}&sub_topic={$rows->sub_topic}&description={$description}'>Move to</a>";
-
-							// $htmlOut .= "<a class='delete' href='index.php?delete=delete&main_topicD={$rows->main_topic}&sub_sub_topic={$rows->sub_sub_topic}&url={$rows->url}&sub_topic={$rows->sub_topic}&description={$description}'>Delete</a></td>";
+							$htmlOut .= "<td><a class='edit' href='main_page.php?module=edit&url={$rows->url}'>Edit</a>";
+//							$htmlOut .= "<a class='move-to' href='main_page.php?move_to=move_to&main_topic={$rows->main_topic}&sub_sub_topic={$rows->sub_sub_topic}&url={$rows->url}&sub_topic={$rows->sub_topic}&description={$description}'>Move to</a>";
+							$htmlOut .= "<a class='move-to' href='main_page.php?module=move&url={$rows->url}'>Move to</a>";
 							$htmlOut .= "<span class='delete'>Delete</span></td>";
-							// "http://example.com/index.html?param=1&anotherParam=2";
 						$htmlOut .= "</tr></tbody>";
 						$i++;
 			}
@@ -181,7 +174,7 @@
 			echo '<div id="delete_massage"></div>';
 		} else {
 			echo 'No Records';
-		}/**/
+		}
 
 	} elseif(isset($_POST['main_topic'])) {
 

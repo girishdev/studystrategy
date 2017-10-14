@@ -84,7 +84,7 @@ Google analytics
 				<div class="col-right index_result col-md-10">
 					<div id="data_present">Content</div>
 				</div>
-			</div>S
+			</div>
 		</div>
 	</div>
 

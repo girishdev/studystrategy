@@ -1,7 +1,9 @@
+
+<h3>logging out please wait...</h3>
+
 <?php
-  
-    require_once('main_page.php');
+    sleep(2);
 	session_destroy();
-	header("Location: 192.168.43.1/studystrategy-new/index.php");
+	header("Location: http://localhost/studystrategy/index.php");
 
 ?>

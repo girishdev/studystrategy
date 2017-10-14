@@ -1,11 +1,14 @@
-<?php 
-	session_start();
-	$db = new mysqli('127.0.0.1','root','root','studytest');
-	// $db = new mysqli('212.1.210.1','tetsi202_DBname','girish618642','tetsi202_study');
-	if($db->connect_errno){
-		echo 'Error';
-		die();
-	}
+<?php
+    ob_start();
+    session_start();
+//	$db = new mysqli('127.0.0.1','root','root','studytest');
+//	// $db = new mysqli('212.1.210.1','tetsi202_DBname','girish618642','tetsi202_study');
+//	if($db->connect_errno){
+//		echo 'Error';
+//		die();
+//	}
+
+    require_once ('init/database.php');
 
 // http://192.168.43.1:8080/vendor/vrana/adminer/adminer/index.php?server=192.168.43.1%3A3306&username=root&db=study&select=study_list&columns%5B0%5D%5Bfun%5D=&columns%5B0%5D%5Bcol%5D=&where%5B0%5D%5Bcol%5D=&where%5B0%5D%5Bop%5D=%3D&where%5B0%5D%5Bval%5D=&order%5B0%5D=&limit=5000000000&text_length=100
 // This Link is to Get Database Connetion
@@ -27,7 +30,7 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 	
 	<script type="text/javascript" language="javascript" src="js/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript" src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=qde4lcvt09fira8t7ploif7b2awn3iu5wdvppouqxo2mdaid"></script>
+<!--	<script type="text/javascript" src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=qde4lcvt09fira8t7ploif7b2awn3iu5wdvppouqxo2mdaid"></script>-->
 	<!-- <script type="text/javascript" >tinymce.init({ selector:'textarea' });</script> -->
 	<script type="text/javascript" language="javascript">
 		// $('#logout').click(function(){
@@ -119,6 +122,12 @@
 						case 'job' :
 							require_once('files/job_profile.php');
 							break;
+                        case 'edit' :
+                            require_once('edit.php');
+                            break;
+                        case 'move' :
+                            require_once('move.php');
+                            break;
 						case 'php' :
 							require_once('files/php.php');
 							break;
@@ -190,38 +199,7 @@
 		<div class="form_content col-md-12">
 			<form id="myForm" method="post" action="select.php">
 				<?php
-				if(isset($_REQUEST['edit']) == 'edit'){
-					$org_sub = $_REQUEST['sub_topic'];
-					$org_sub_sub = $_REQUEST['sub_sub_topic'];
-					$org_url = $_REQUEST['url'];
-					?>
-					<div class="form-group">
-						<label for="subtopic">Main Topic: </label>
-						<input type="text" class="form-control" id="up_select1" name="select1" value="<? echo $_REQUEST['main_topic']; ?>" id="url" placeholder="Url" />
-					</div>
-					<div class="form-group">
-						<label for="subtopic">Sub Topic: </label>
-						<input type="text" class="form-control" id="up_select2" name="select2" value="<? echo $_REQUEST['sub_topic']; ?>" id="url" placeholder="Url" />
-						<input type="hidden" class="form-control" id="org_sub" name="select2_org" value="<? echo $org_sub; ?>" id="url" placeholder="Url" />
-					</div>
-					<div class="form-group">
-						<label for="subtopic">Sub Sub Topic: </label>
-						<input type="text" class="form-control" id="up_select3" name="select3" value="<? echo $_REQUEST['sub_sub_topic']; ?>" id="url" placeholder="Url" />
-						<input type="hidden" class="form-control" id="org_sub_sub" name="select3_org" value="<? echo $org_sub_sub; ?>" id="url" placeholder="Url" />
-					</div>
-					<div class="form-group">
-						<label for="url">URL: </label>
-						<input type="text" class="form-control" id="up_url" name="opturl" value="<? echo $_REQUEST['url']; ?>" id="url" placeholder="Url" />
-						<input type="hidden" class="form-control" id="org_url" name="opturl_org" value="<? echo $org_url; ?>" id="url" placeholder="Url" />
-					</div>
-					<div class="form-group">
-						<label for="description">Description</label>
-						<textarea class="form-control" name="description" id="description" rows="3"><?php echo $_REQUEST['description']; ?></textarea>
-					</div>
-					<!--<input type="button" id="submitformupdateid" onclick="submitformupdate()" value="Update">-->
-					<button type="button" id="submitformupdateid" onclick="submitformupdate()" class="btn btn-default">Update</button>
-
-				<?php } elseif(isset($_REQUEST['delete']) == 'delete') {
+				if(isset($_REQUEST['delete']) == 'delete'){
 					echo 'Are you sure you want to delete';
 					$org_sub = $_REQUEST['sub_topic'];
 					$org_sub_sub = $_REQUEST['sub_sub_topic'];
@@ -278,7 +256,6 @@
 						<label for="description">Description</label>
 						<textarea class="form-control" name="description" id="description" rows="3"><?php echo $_REQUEST['description']; ?></textarea>
 					</div>
-					<!--<input type="button" id="submitformmovetoid" onclick="submitform_moveto()" value="Move">-->
 					<button type="button" id="submitformmovetoid" onclick="submitform_moveto()" name="add_topic" class="btn btn-default">Move</button>
 				<?php } else {
 					?>
@@ -290,7 +267,6 @@
 					<label for="description">Description</label>
 					<textarea class="form-control" name="description" id="description" rows="3"></textarea>
 				</div>
-				<!--<input type="button" id="submitformid" onclick="submitform()" value="Save">-->				
 				<button type="button" id="submitformid" onclick="submitform()" name="add_topic" class="btn btn-default">Save</button>
 				<?php }
 				}?>
@@ -433,7 +409,9 @@
 				    	echo 'Not flushed..';
 				    }/**/
 
-				?>
+                ob_end_flush();
+
+                ?>
 				</div>
 
 			<div id="message"></div>
