@@ -16,28 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `dictionary`
+-- Table structure for table `login_form`
 --
 
-DROP TABLE IF EXISTS `dictionary`;
+DROP TABLE IF EXISTS `login_form`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `dictionary` (
+CREATE TABLE `login_form` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
-  `englishword` varchar(50) NOT NULL,
-  `kannadaword` varchar(50) NOT NULL,
+  `login_id` varchar(250) NOT NULL,
+  `password` varchar(250) NOT NULL,
+  `date` varchar(250) NOT NULL,
+  `time` varchar(250) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `dictionary`
+-- Dumping data for table `login_form`
 --
 
-LOCK TABLES `dictionary` WRITE;
-/*!40000 ALTER TABLE `dictionary` DISABLE KEYS */;
-INSERT INTO `dictionary` VALUES (1,'English','Kannada'),(2,'cattel','ಕ್ಯಾಟೆಲ್'),(3,'sir','à²¸à²°à³'),(4,'sri','à²¶à³à²°à²¿à³•'),(5,'enterprise','à²‰à²¦à³à²¯à²®'),(6,'seamless','à²¤à²¡à³†à²°à²¹à²¿à²¤'),(7,'Description',''),(8,'continuous',''),(12,'Management','à²¨à²¿à²°à³à²µà²¹à²£à³†');
-/*!40000 ALTER TABLE `dictionary` ENABLE KEYS */;
+LOCK TABLES `login_form` WRITE;
+/*!40000 ALTER TABLE `login_form` DISABLE KEYS */;
+INSERT INTO `login_form` VALUES (1,'girish@gmail.com','123456','','');
+/*!40000 ALTER TABLE `login_form` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -49,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-17 21:14:35
+-- Dump completed on 2017-10-16 15:17:27
