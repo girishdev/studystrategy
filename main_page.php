@@ -64,6 +64,7 @@
 							<li><a href="main_page.php?module=wordpress">Wordpress</a></li>
 							<li><a href="main_page.php?module=symfony">Symfony</a></li>
 							<li><a href="main_page.php?module=laravel">Laravel</a></li>
+							<li><a href="main_page.php?module=codeigniter">Codeigniter</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
@@ -142,6 +143,9 @@
 							break;
 						case 'laravel' :
 							require_once('files/laravel.php');
+							break;
+                        case 'codeigniter' :
+							require_once('files/codeigniter.php');
 							break;
 						case 'ajax' :
 							require_once('files/ajax.php');

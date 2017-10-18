@@ -4,6 +4,7 @@
 <?php
 
     $org_url = $_REQUEST['url'];
+    urldecode($org_url);
     $select = $db->query("SELECT * FROM study_list WHERE url='".$org_url."'");
     $count = $select->num_rows;
     if($count > 0){

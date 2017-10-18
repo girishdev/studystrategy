@@ -58,6 +58,7 @@
 	}
 
 	if(isset($_POST['opturl']) && !empty($_POST['opturl'])){
+	    // First time inserting data
 		$main_topic = trim($_POST['select1']);
 		$sub_topic = trim($_POST['select2']);
 		$sub_sub_topic = trim($_POST['select3']);
@@ -69,8 +70,7 @@
 		if($insert == true){
 			echo '<div class="alert alert-success">Successfully inserted 1 ting.., Thankyou </div>';
 		} else {
-			echo "<div class='alert alert-danger'>Insert Unsuccessful <b>$db->error</b></div>";
-			echo $date;
+			echo "<div class='alert alert-danger'>Insert Unsuccessful --Test first-- <b>$db->error</b></div>";
 		}
 	} elseif(isset($_POST['opturl_moveto']) && !empty($_POST['opturl_moveto'])){
         // This is for Move related data, Ajax call from tutorial.js(submitform_moveto) and main request form move.php
@@ -146,25 +146,35 @@
 								<th>Delete</th>-->
 								</tr></thead>";
 			while($rows = $select->fetch_object()){
+				$urlencode = urlencode($rows->url);
+                // This is to Display favicon:
+//				$doc = new DOMDocument();
+//				$doc->strictErrorChecking = FALSE;
+//				$doc->loadHTML(file_get_contents($rows->url));
+//				$xml = simplexml_import_dom($doc);
+//				$arr = $xml->xpath('//link[@rel="shortcut icon"]');
+//				$imgv = $arr[0]['href'];
 				$htmlOut .= "<tbody class='action_box'><tr>
 							<td>$i).{$rows->main_topic}</td>
 							<td>{$rows->sub_topic}</td>
 							<td>{$rows->sub_sub_topic}</td> ";
 							if($rows->sub_sub_topic == true) {
 								$htmlOut .= "<td><a class='link' target='_blank' href='{$rows->url}'>{$rows->sub_sub_topic}</a><br />
-								{$rows->url}</td>";
+                                <img src='$imgv' alt='IMG' /><br />
+                                {$rows->url}</td>";
 							} elseif($rows->sub_sub_topic == false && $rows->sub_topic == true){
 								$htmlOut .= "<td><a class='link' target='_blank' href='{$rows->url}'>{$rows->sub_topic}</a><br />
+								<img src='$imgv' alt='IMG' /><br />
 								{$rows->url}</td>";
 							} elseif($rows->sub_topic == false && $rows->sub_sub_topic == false){
 								$htmlOut .= "<td><a class='link' target='_blank' href='{$rows->url}'>{$rows->main_topic}</a><br />
+								<img src='$imgv' alt='IMG' /><br />
 								{$rows->url}</td>";
 							}
 							$description = $rows->description;
 							$description = wordwrap($description, 50,"<br />\n");
 							$htmlOut .= "<td class='box effect5'><pre class='description'>{$description}</pre></td>";
-							$htmlOut .= "<td><a class='edit' href='main_page.php?module=edit&url={$rows->url}'>Edit</a>";
-//							$htmlOut .= "<a class='move-to' href='main_page.php?move_to=move_to&main_topic={$rows->main_topic}&sub_sub_topic={$rows->sub_sub_topic}&url={$rows->url}&sub_topic={$rows->sub_topic}&description={$description}'>Move to</a>";
+                            $htmlOut .= "<td><a class='edit' href='main_page.php?module=edit&url=$urlencode'>Edit</a>";
 							$htmlOut .= "<a class='move-to' href='main_page.php?module=move&url={$rows->url}'>Move to</a>";
 							$htmlOut .= "<span class='delete'>Delete</span></td>";
 						$htmlOut .= "</tr></tbody>";
