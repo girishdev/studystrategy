@@ -130,7 +130,7 @@
 	} elseif(isset($_POST['sub_sub_topic'])) {
 		$htmlOut = '';
 		$sub_sub_topic = $_POST['sub_sub_topic'];
-		$select = $db->query(" SELECT * FROM study_list WHERE sub_sub_topic='".$sub_sub_topic."' order by url asc");
+		$select = $db->query(" SELECT * FROM study_list WHERE sub_sub_topic='".$sub_sub_topic."' order by entered_on desc");
 		$i = 1;
 		$num_rows = $select->num_rows;
 		if($num_rows >= 1){
