@@ -32,11 +32,21 @@
 	<script type="text/javascript" language="javascript" src="js/jquery-3.1.1.min.js"></script>
 <!--	<script type="text/javascript" src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=qde4lcvt09fira8t7ploif7b2awn3iu5wdvppouqxo2mdaid"></script>-->
 	<!-- <script type="text/javascript" >tinymce.init({ selector:'textarea' });</script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" language="javascript">
-		// $('#logout').click(function(){
-			// alert('test');		
-		// });
+		$(document).ready(function(){
+		    $(document).ajaxStart(function(){
+		        $("#wait").css("display", "block");
+		    });
+		    $(document).ajaxComplete(function(){
+		        $("#wait").css("display", "none");
+		    });
+		    $("a, h5, span").click(function(){
+		        $("#txt").load("demo_ajax_load.asp");
+		    });
+		});
 	</script>
+
 </head>
 
 <body>
@@ -114,7 +124,7 @@
 				</form>
 			</div>
 		</nav>
-			
+
 			<?php
 
 				if(isset($_REQUEST['module']) && !empty($_REQUEST['module'])) {?>
@@ -419,7 +429,7 @@
 				</div>
 
 			<div id="message"></div>
-		
+<div id="wait" style="display:none;width:69px;height:89px;border:1px solid black;position:absolute;top:50%;left:50%;padding:2px;"><img src='demo_wait.gif' width="64" height="64" /><br>Loading..</div>
 		<div class="top"><i>Go Top</i></div>		
 		<script type="text/javascript" language="javascript" src="js/jquery-3.1.1.min.js"></script>
 		<script type="text/javascript" language="javascript" src="js/bootstrap.js" ></script>

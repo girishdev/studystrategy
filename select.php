@@ -15,6 +15,17 @@
 	<script type="text/javascript" language="javascript" src="js/tutorial2.js" ></script>
 	<script>
 		$(document).ready(function(){
+		    $(document).ajaxStart(function(){
+		        $("#wait").css("display", "block");
+		    });
+		    $(document).ajaxComplete(function(){
+		        $("#wait").css("display", "none");
+		    });
+		    $("button").click(function(){
+		        $("#txt").load("demo_ajax_load.asp");
+		    });
+		});
+		$(document).ready(function(){
 			// $("td:has(a.link)").css("color","pink");
 			// $('.delete').click(function(){
 				// var answer = confirm ("Are you sure you want to delete from the database?");
@@ -148,12 +159,14 @@
 			while($rows = $select->fetch_object()){
 				$urlencode = urlencode($rows->url);
                 // This is to Display favicon:
-//				$doc = new DOMDocument();
-//				$doc->strictErrorChecking = FALSE;
-//				$doc->loadHTML(file_get_contents($rows->url));
-//				$xml = simplexml_import_dom($doc);
-//				$arr = $xml->xpath('//link[@rel="shortcut icon"]');
-//				$imgv = $arr[0]['href'];
+				
+				// $doc = new DOMDocument();
+				// $doc->strictErrorChecking = FALSE;
+				// $doc->loadHTML(file_get_contents($urlencode));
+				// $xml = simplexml_import_dom($doc);
+				// $arr = $xml->xpath('//link[@rel="shortcut icon"]');
+				// $imgv = $arr[0]['href'];
+
 				$htmlOut .= "<tbody class='action_box'><tr>
 							<td>$i).{$rows->main_topic}</td>
 							<td>{$rows->sub_topic}</td>
