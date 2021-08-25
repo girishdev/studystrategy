@@ -46,7 +46,26 @@
 		    });
 		});
 	</script>
-
+	<style>
+		.subjectCount {
+			margin-bottom: 20px;
+			display: flex;
+		}
+		.subjectCount .topic img {
+			width: 50%;
+		}
+		.actualCount {
+			text-align: center;
+		}
+		.subjectCount .topic {
+			width: 15%;
+			float: left;
+			border: 1px solid gray;
+			padding: 5px;
+			border-radius: 5%;
+			margin-right: 20px;
+		}
+	</style>
 </head>
 
 <body>
@@ -238,8 +257,20 @@
 					}
 		
 				} else {?>
-				<div class="subjectCount">
-					Hello
+				<div class="subjectCount col-md-9 col-md-offset-3">
+					<?php 
+						$topics = ['laravel'=>200, 'php'=>350, 'yii2'=>50, 'mysql'=>150]; 
+						foreach ($topics as $topic => $count) { ?>
+							<div class="topic <?= $topic ?>">
+								<span><?= $topic ?></span>
+								<img src="images/<?= $topic ?>.png" alt="<?= $topic ?>">
+								<div class="actualCount">
+									<span><?= $count ?></span>
+								</div>
+							</div> 
+							<?php
+						}
+					?>
 				</div>
 				<div class="form-group">
 					<?php $select = $db->query("SELECT DISTINCT main_topic FROM topics WHERE main_topic<>'' "); ?>
