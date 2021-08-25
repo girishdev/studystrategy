@@ -238,6 +238,9 @@
 					}
 		
 				} else {?>
+				<div class="subjectCount">
+					Hello
+				</div>
 				<div class="form-group">
 					<?php $select = $db->query("SELECT DISTINCT main_topic FROM topics WHERE main_topic<>'' "); ?>
 					<label for="maintopic">Main Topic: </label>
