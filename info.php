@@ -68,3 +68,12 @@ Personal Development
 - Doubts
 - English
 - Aptitude
+
+Pending Points:
+- Add a PNG Logo
+- Make It Responsive
+- Count all the pages we have
+- Playlist like youtube
+- Git Connect and Commit
+- Css and Js file should be in one palce
+- Code optmization
