@@ -58,9 +58,6 @@ Tools
 - Data structures
 - Big Data
 
-
-
-
 Personal Development
 - Job Profile
 - Imp Links
