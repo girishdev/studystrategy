@@ -47,6 +47,10 @@
 		});
 	</script>
 	<style>
+        .navbar-brand {
+            line-height: 40px;
+        }
+
 		.subjectCount {
 			margin-bottom: 20px;
 			display: flex;
@@ -79,7 +83,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="main_page.php" class="home navbar-brand">Home</a>
+				<a href="main_page.php" class="home navbar-brand">StudyStrategy</a>
 			</div>
 			
 			<div class="collapse navbar-collapse" id="mainNavBar">
