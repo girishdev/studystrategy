@@ -25,6 +25,7 @@ Wed Developer
 - jQuery
 - Ajax
 - Bootstrap
+- AdminLT
 - Material UI
 
 Framework
