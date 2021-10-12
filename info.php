@@ -25,6 +25,7 @@ Wed Developer
 - jQuery
 - Ajax
 - Bootstrap
+- AdminLT
 - Material UI
 
 Framework
@@ -74,3 +75,13 @@ Pending Points:
 - Git Connect and Commit
 - Css and Js file should be in one palce
 - Code optmization
+
+Things to take care:
+- Question and Answers
+- Interview
+- Advanced Question and Answers
+- Topics Indexing
+- Cheat Sheet
+- Import Video
+- Topic Related Images Import
+- Library's and Package
