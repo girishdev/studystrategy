@@ -4,6 +4,6 @@
 <?php
     sleep(2);
 	session_destroy();
-	header("Location: http://localhost/studystrategy/index.php");
+	header("Location: http://localhost/projects/studystrategy/index.php");
 
 ?>

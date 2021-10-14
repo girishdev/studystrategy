@@ -1,17 +1,21 @@
+<?php
+
+echo '<pre>';
+echo "
 This is the info page and Task Page
 
 1. Subject Logos
 2. Information page
 3. README PAGE
 4. MENUS
-Program
+Program => Added
 - Php
 - Python
 - JavaScript
 - C
 - C++
 
-Database
+Database => Added
 - Mysql
 - Postgresql
 - MongoDB
@@ -19,7 +23,7 @@ Database
 - Elastic Search
 - Redis
 
-Wed Developer
+Wed Developer => Done
 - Html
 - Css
 - jQuery
@@ -28,7 +32,7 @@ Wed Developer
 - AdminLT
 - Material UI
 
-Framework
+Framework => Done
 - Laravel
 - Yii2
 - Wordpress
@@ -38,11 +42,11 @@ Framework
 - ReactJs
 - VueJs
 
-Operating System
+Operating System => Done
 - Windows
 - Ubuntu
 
-Tools
+Tools => ...
 - VS Code
 - Sublime
 - JIRA
@@ -84,4 +88,5 @@ Things to take care:
 - Cheat Sheet
 - Import Video
 - Topic Related Images Import
-- Library's and Package
+- Library's and Package";
+echo '</pre>';
