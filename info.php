@@ -8,15 +8,16 @@ This is the info page and Task Page
 2. Information page
 3. README PAGE
 4. MENUS
+
 Program => Added
-- Php
+- Php - Priority
 - Python
-- JavaScript
+- JavaScript - Priority
 - C
 - C++
 
 Database => Added
-- Mysql
+- Mysql - Priority
 - Postgresql
 - MongoDB
 - MariaDB
@@ -33,8 +34,8 @@ Wed Developer => Done
 - Material UI
 
 Framework => Done
-- Laravel
-- Yii2
+- Laravel - Priority
+- Yii2 - Priority
 - Wordpress
 - Symfony
 - Codeigniter
@@ -44,7 +45,7 @@ Framework => Done
 
 Operating System => Done
 - Windows
-- Ubuntu
+- Ubuntu - Priority
 
 Tools => ...
 - VS Code
@@ -52,8 +53,8 @@ Tools => ...
 - JIRA
 - Jmeter
 - Docker
-- Postman
-- Git
+- Postman - Priority
+- Git - Priority
 - Agile Metho
 - AWS
 - Google Cloude
