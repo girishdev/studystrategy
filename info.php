@@ -94,6 +94,11 @@ Things to take care:
 
 Priority Task First Because Of Interview:
 - Laravel
+  Quize Links
+  Index/Topics
+  Important Websites
+  Questions and Answers
+  Tips and Tricks
 
 - Php
   + Get Important Codes from CDI Web App
