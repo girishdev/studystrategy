@@ -47,7 +47,7 @@ Operating System => Done
 - Windows
 - Ubuntu - Priority
 
-Tools => ...
+Tools => Done
 - VS Code
 - Sublime
 - JIRA
@@ -89,5 +89,33 @@ Things to take care:
 - Cheat Sheet
 - Import Video
 - Topic Related Images Import
-- Library's and Package";
+- Library's and Package
+- Plan on Certification
+
+Priority Task First Because Of Interview:
+- Laravel
+
+- Php
+  + Get Important Codes from CDI Web App
+
+- JavaScript
+  + Get Important Codes from CDI Web App
+
+- jQuery
+  + Get Important Codes from CDI Web App
+
+- Mysql
+  + Copy Important Queries From CDI DB
+
+- VueJs / ReactJs
+
+- AWS / SCP Commends
+
+- Ubuntu Server
+
+
+
+
+
+";
 echo '</pre>';
