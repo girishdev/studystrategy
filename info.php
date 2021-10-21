@@ -72,14 +72,16 @@ Personal Development
 - English
 - Aptitude
 
-Pending Points:
-- Add a PNG Logo
-- Make It Responsive
-- Count all the pages we have
-- Playlist like youtube
-- Git Connect and Commit
-- Css and Js file should be in one palce
-- Code optmization
+TODO/Pending Task:
+    - Count all topics and add PNG Logo respective topics
+        + On Click It should go to respective page
+        + Add Only PNG Logo
+    - Make It Responsive
+    - Count all the pages we have
+    - Playlist like youtube
+    // - Git Connect and Commit
+    - Css and Js file should be in one palce
+    - Code optmization
 
 Things to take care:
     - Question and Answers

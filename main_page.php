@@ -48,7 +48,7 @@ require_once('init/database.php');
     </script>
     <style>
         .navbar-inverse .navbar-brand {
-            padding: 5px 0px 5px 13px; 
+            padding: 5px 0px 5px 13px;
             line-height: 40px;
         }
 
@@ -167,6 +167,7 @@ require_once('init/database.php');
                             <li><a href="main_page.php?module=data_structures">Data structures</a></li>
                             <li><a href="main_page.php?module=big_data">Big Data</a></li>
                             <li><a href="main_page.php?module=info">Info</a></li>
+                            <li><a href="main_page.php?module=readme">Readme</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -205,8 +206,12 @@ require_once('init/database.php');
         if (isset($_REQUEST['module']) && !empty($_REQUEST['module'])) { ?>
             <div class="panel-body clearfix"><?php
                                                 switch ($_REQUEST['module']) {
+                                                    case 'readme':
+                                                        require_once('readme.php');
+                                                        break;
                                                     case 'info':
                                                         require_once('info.php');
+                                                        break;
                                                     case 'job':
                                                         require_once('files/job_profile.php');
                                                         break;
