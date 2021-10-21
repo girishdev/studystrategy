@@ -53,12 +53,12 @@ require_once('init/database.php');
         }
 
         .subjectCount {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             display: flex;
         }
 
         .subjectCount .topic img {
-            width: 50%;
+            width: 34%;
         }
 
         .actualCount {
@@ -321,11 +321,11 @@ require_once('init/database.php');
                         } else { ?>
                             <div class="subjectCount col-md-9 col-md-offset-3">
                                 <?php
-                                $topics = ['laravel' => 200, 'php' => 350, 'yii2' => 50, 'mysql' => 150];
+                                $topics = ['laravel2' => 200, 'php3' => 350, 'yii3' => 50, 'mysql1' => 150, 'python2' => 100];
                                 foreach ($topics as $topic => $count) { ?>
                                     <div class="topic <?= $topic ?>">
-                                        <span><?= $topic ?></span>
                                         <img src="images/<?= $topic ?>.png" alt="<?= $topic ?>">
+                                        <span><?= $topic ?></span>
                                         <div class="actualCount">
                                             <span><?= $count ?></span>
                                         </div>

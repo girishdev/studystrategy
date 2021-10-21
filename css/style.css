@@ -175,7 +175,7 @@ table th, table td {
 #topic span, #sub_sub_topic h5 {
 	cursor: pointer;
 	color: green;
-	line-height: 30px;
+	line-height: 40px;
 }
 #sub_sub_topic h5 {
     margin: 0px;
