@@ -82,42 +82,69 @@ Pending Points:
 - Code optmization
 
 Things to take care:
-- Question and Answers
-- Interview
-- Advanced Question and Answers
-- Topics Indexing
-- Cheat Sheet
-- Import Video
-- Topic Related Images Import
-- Library's and Package
-- Plan on Certification
+    - Question and Answers
+    - Interview
+    - Advanced Question and Answers
+    - Topics Indexing
+    - Cheat Sheet
+    - Import Video
+    - Topic Related Images Import
+    - Library's and Package
+    - Plan on Certification
 
 Priority Task First Because Of Interview:
-- Laravel
-  Quize Links
-  Index/Topics
-  Important Websites
-  Questions and Answers
-  Tips and Tricks
+    - Laravel
+    Quize Links
+    Index/Topics
+    Important Websites
+    Questions and Answers
+    Tips and Tricks
 
-- Php
-  + Get Important Codes from CDI Web App
+    - Php
+    + Get Important Codes from CDI Web App
 
-- JavaScript
-  + Get Important Codes from CDI Web App
+    - JavaScript
+    + Get Important Codes from CDI Web App
 
-- jQuery
-  + Get Important Codes from CDI Web App
+    - jQuery
+    + Get Important Codes from CDI Web App
 
-- Mysql
-  + Copy Important Queries From CDI DB
+    - Mysql
+    + Copy Important Queries From CDI DB
 
-- VueJs / ReactJs
+    - VueJs / ReactJs
 
-- AWS / SCP Commends
+    - AWS / SCP Commends
 
-- Ubuntu Server
+    - Ubuntu Server
 
+Database:
+- login_form
+    Id
+    login_id
+    password
+    date
+    time
+
+- study_list
+    Id
+    main_topic
+    sub_topic
+    sub_sub_topic
+    description
+    url
+    entered_on
+    
+- topics
+    Id
+    main_topic
+    sub_topic
+    sub_sub_topic
+    
+- dictionary
+    Id
+    englishword
+    kannadaword
 
 
 
