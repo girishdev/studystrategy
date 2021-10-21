@@ -47,7 +47,8 @@ require_once('init/database.php');
         });
     </script>
     <style>
-        .navbar-brand {
+        .navbar-inverse .navbar-brand {
+            padding: 5px 0px 5px 13px; 
             line-height: 40px;
         }
 

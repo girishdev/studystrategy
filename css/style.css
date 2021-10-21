@@ -24,7 +24,7 @@
 	margin: 2px 0px;
 }
 .navbar-collapse.collapse {
-	//height: 40px;
+	*height: 40px;
 	width: 100%;
 }
 .btn-primary {
@@ -32,7 +32,7 @@
 }
 
 .panel-body{
-	padding: 0px;
+	/* padding: 0px; commented because it is effective holde body sections */
 }
 
 .clearfix:after {
