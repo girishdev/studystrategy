@@ -52,17 +52,16 @@ require_once('init/database.php');
             line-height: 40px;
         }
 
+
+        /*
         .subjectCount {
             margin-bottom: 30px;
             display: flex;
         }
 
-        .subjectCount .topic img {
-            width: 34%;
-        }
-
         .actualCount {
-            text-align: center;
+            text-align: right;
+            margin-right: 22px;
         }
 
         .subjectCount .topic {
@@ -72,7 +71,46 @@ require_once('init/database.php');
             padding: 5px;
             border-radius: 5%;
             margin-right: 20px;
+            box-shadow: 0 -5px 5px rgba(55, 55, 55, 0.05),
+                inset 0 -5px 5px rgba(55, 55, 55, 0.05),
+                0 5px 5px rgba(0, 0, 0, 0.3), inset 0 5px 5px rgba(0, 0, 0, 0.3);
         }
+
+        .topic-logo,
+        .topic-count {
+            width: 50%;
+        } /**/ 
+
+        .subjectCount .topic {
+            /* width: 15%; */
+            /* float: left; */
+            border: 1px solid gray;
+            padding: 5px;
+            border-radius: 5%;
+            margin-right: 20px;
+            box-shadow: 0 -5px 5px rgba(55, 55, 55, 0.05),
+                inset 0 -5px 5px rgba(55, 55, 55, 0.05),
+                0 5px 5px rgba(0, 0, 0, 0.3), inset 0 5px 5px rgba(0, 0, 0, 0.3);
+        }
+        .topic-logo, .topic-count {
+            padding: 0px;
+        }
+        .topic-count {
+            text-align: center;
+        }
+        .topic-count span {
+            line-height: 3.5;
+            display: inline-block;
+            vertical-align: middle;
+            font-weight: bold;
+            text-transform: uppercase;
+        } 
+        .subjectCount .topic img {
+            width: 100%;
+            cursor: pointer;
+            text-align: center;
+        } /**/
+
     </style>
 </head>
 
@@ -319,17 +357,33 @@ require_once('init/database.php');
                                 echo 'Delete Unsuccessfull...!';
                             }
                         } else { ?>
-                            <div class="subjectCount col-md-9 col-md-offset-3">
+                            <div class="subjectCount col-md-12">
                                 <?php
-                                $topics = ['laravel2' => 200, 'php3' => 350, 'yii3' => 50, 'mysql1' => 150, 'python2' => 100];
+                                $topics = ['laravel' => 200, 'php' => 350, 'yii' => 50, 'mysql' => 150, 'python' => 100];
                                 foreach ($topics as $topic => $count) { ?>
-                                    <div class="topic <?= $topic ?>">
-                                        <img src="images/<?= $topic ?>.png" alt="<?= $topic ?>">
-                                        <span><?= $topic ?></span>
-                                        <div class="actualCount">
-                                            <span><?= $count ?></span>
+                                    <div class="row col-md-2 topic <?= $topic ?>">
+                                        <div class="topic-logo col-md-6">
+                                            <img src="images/<?= $topic ?>.png" alt="<?= $topic ?>">
+                                        </div>
+                                        <div class="topic-count col-md-6">
+                                            <span>
+                                                <?= $topic ?>
+                                                <br>
+                                                <?= $count ?>
+                                            </span>
                                         </div>
                                     </div>
+                                    <!-- <div class="topic <?= $topic ?>">
+                                        <div class="topic-logo">
+                                            <img src="images/<?= $topic ?>.png" alt="<?= $topic ?>">
+                                        </div>
+                                        <div class="topic-count">
+                                            <span><?= $topic ?></span>
+                                            <div class="actualCount">
+                                                <span><?= $count ?></span>
+                                            </div>
+                                        </div>
+                                    </div> -->
                                 <?php
                                 }
                                 ?>
