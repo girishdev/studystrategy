@@ -33,6 +33,7 @@ require_once('init/database.php');
     <!--	<script type="text/javascript" src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=qde4lcvt09fira8t7ploif7b2awn3iu5wdvppouqxo2mdaid"></script>-->
     <!-- <script type="text/javascript" >tinymce.init({ selector:'textarea' });</script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <script type="text/javascript" language="javascript">
         $(document).ready(function() {
             $(document).ajaxStart(function() {
@@ -46,6 +47,7 @@ require_once('init/database.php');
             });
         });
     </script>
+
     <style>
         .navbar-inverse .navbar-brand {
             padding: 5px 0px 5px 13px;
@@ -79,7 +81,7 @@ require_once('init/database.php');
         .topic-logo,
         .topic-count {
             width: 50%;
-        } /**/ 
+        } /**/
 
         .subjectCount .topic {
             /* width: 15%; */
@@ -92,25 +94,31 @@ require_once('init/database.php');
                 inset 0 -5px 5px rgba(55, 55, 55, 0.05),
                 0 5px 5px rgba(0, 0, 0, 0.3), inset 0 5px 5px rgba(0, 0, 0, 0.3);
         }
-        .topic-logo, .topic-count {
+
+        .topic-logo,
+        .topic-count {
             padding: 0px;
         }
+
         .topic-count {
             text-align: center;
         }
+
         .topic-count span {
             line-height: 3.5;
             display: inline-block;
             vertical-align: middle;
             font-weight: bold;
             text-transform: uppercase;
-        } 
+        }
+
         .subjectCount .topic img {
             width: 100%;
             cursor: pointer;
             text-align: center;
-        } /**/
+        }
 
+        /**/
     </style>
 </head>
 
@@ -242,93 +250,93 @@ require_once('init/database.php');
         <?php
 
         if (isset($_REQUEST['module']) && !empty($_REQUEST['module'])) { ?>
-            <div class="panel-body clearfix"><?php
-                                                switch ($_REQUEST['module']) {
-                                                    case 'readme':
-                                                        require_once('readme.php');
-                                                        break;
-                                                    case 'info':
-                                                        require_once('info.php');
-                                                        break;
-                                                    case 'job':
-                                                        require_once('files/job_profile.php');
-                                                        break;
-                                                    case 'edit':
-                                                        require_once('edit.php');
-                                                        break;
-                                                    case 'move':
-                                                        require_once('move.php');
-                                                        break;
-                                                    case 'php':
-                                                        require_once('files/php.php');
-                                                        break;
-                                                    case 'mysql':
-                                                        require_once('files/mysql.php');
-                                                        break;
-                                                    case 'wordpress':
-                                                        require_once('files/wordpress.php');
-                                                        break;
-                                                    case 'symfony':
-                                                        require_once('files/symfony.php');
-                                                        break;
-                                                    case 'laravel':
-                                                        require_once('files/laravel.php');
-                                                        break;
-                                                    case 'codeigniter':
-                                                        require_once('files/codeigniter.php');
-                                                        break;
-                                                    case 'ajax':
-                                                        require_once('files/ajax.php');
-                                                        break;
-                                                    case 'jquery':
-                                                        require_once('files/jquery.php');
-                                                        break;
-                                                    case 'javascript':
-                                                        require_once('files/javascript.php');
-                                                        break;
-                                                    case 'html':
-                                                        require_once('files/html.php');
-                                                        break;
-                                                    case 'css':
-                                                        require_once('files/css.php');
-                                                        break;
-                                                    case 'bootstrap':
-                                                        require_once('files/bootstrap.php');
-                                                        break;
-                                                    case 'add_topic':
-                                                        require_once('add_topic.php');
-                                                        break;
-                                                    case 'logout':
-                                                        require_once('logout.php');
-                                                        break;
-                                                    case 'ubuntu':
-                                                        require_once('files/ubuntu.php');
-                                                        break;
-                                                    case 'aptitude':
-                                                        require_once('files/aptitude.php');
-                                                        break;
-                                                    case 'english':
-                                                        require_once('files/english.php');
-                                                        break;
-                                                    case 'doubts':
-                                                        require_once('files/doubts.php');
-                                                        break;
-                                                    case 'imp_links':
-                                                        require_once('files/imp_Links.php');
-                                                        break;
-                                                    case 'imp_noted':
-                                                        require_once('files/imp_Noted.php');
-                                                        break;
-                                                    case 'java':
-                                                        require_once('files/java.php');
-                                                        break;
-                                                    case 'w3schools':
-                                                        require_once("http://www.w3schools.com/html/default.asp");
-                                                        break;
-                                                } ?>
+            <div class="panel-body clearfix">
+                <?php
+                switch ($_REQUEST['module']) {
+                    case 'readme':
+                        require_once('readme.php');
+                        break;
+                    case 'info':
+                        require_once('info.php');
+                        break;
+                    case 'job':
+                        require_once('files/job_profile.php');
+                        break;
+                    case 'edit':
+                        require_once('edit.php');
+                        break;
+                    case 'move':
+                        require_once('move.php');
+                        break;
+                    case 'php':
+                        require_once('files/php.php');
+                        break;
+                    case 'mysql':
+                        require_once('files/mysql.php');
+                        break;
+                    case 'wordpress':
+                        require_once('files/wordpress.php');
+                        break;
+                    case 'symfony':
+                        require_once('files/symfony.php');
+                        break;
+                    case 'laravel':
+                        require_once('files/laravel.php');
+                        break;
+                    case 'codeigniter':
+                        require_once('files/codeigniter.php');
+                        break;
+                    case 'ajax':
+                        require_once('files/ajax.php');
+                        break;
+                    case 'jquery':
+                        require_once('files/jquery.php');
+                        break;
+                    case 'javascript':
+                        require_once('files/javascript.php');
+                        break;
+                    case 'html':
+                        require_once('files/html.php');
+                        break;
+                    case 'css':
+                        require_once('files/css.php');
+                        break;
+                    case 'bootstrap':
+                        require_once('files/bootstrap.php');
+                        break;
+                    case 'add_topic':
+                        require_once('add_topic.php');
+                        break;
+                    case 'logout':
+                        require_once('logout.php');
+                        break;
+                    case 'ubuntu':
+                        require_once('files/ubuntu.php');
+                        break;
+                    case 'aptitude':
+                        require_once('files/aptitude.php');
+                        break;
+                    case 'english':
+                        require_once('files/english.php');
+                        break;
+                    case 'doubts':
+                        require_once('files/doubts.php');
+                        break;
+                    case 'imp_links':
+                        require_once('files/imp_Links.php');
+                        break;
+                    case 'imp_noted':
+                        require_once('files/imp_Noted.php');
+                        break;
+                    case 'java':
+                        require_once('files/java.php');
+                        break;
+                    case 'w3schools':
+                        require_once("http://www.w3schools.com/html/default.asp");
+                        break;
+                } ?>
             </div><?php
-                } else {
-                    ?>
+                } else { ?>
             <div class="panel-body" id="topic">
                 <div class="form_content col-md-12">
                     <form id="myForm" method="post" action="select.php">
@@ -434,29 +442,31 @@ require_once('init/database.php');
                                 <button type="button" id="submitformid" onclick="submitform()" name="add_topic" class="btn btn-default">Save</button>
                         <?php }
                         } ?>
-
                     </form>
                     <div id="message"></div>
                 </div>
             </div>
+
+            <div class="panel-body">
+                <?php require_once('files/urgent-topic.php'); ?>
+            </div>
             <div class="panel-body" id="data_present4"></div>
 
-        <?php
-
-                    echo '<div class="images col-md-12">
-							<div class="action">
-								<h4>=>Adding url of that topic</h4>	
-								<h4>=>Adding Quiz links of that topic</h4>	
-								<h4>=>Adding Very Important websites  of that topic</h4>	
-								<h4>=>Adding Doubts section on that topic</h4>	
-								<h4>=>Adding Notes on that topic</h4>	
-								<h4>=>Adding Index of that topic</h4>	
-							</div>
-							<div class="image_div col-md-6 col-md-offset-2">
-								<img class="img-responsive" src="images/technologies_banner.png" alt="technologies_banner" />
-							</div>
-						 </div>';
-                } ?>
+                <?php
+                /* echo '<div class="images col-md-12">
+                        <div class="action">
+                            <h4>=>Adding url of that topic</h4>	
+                            <h4>=>Adding Quiz links of that topic</h4>	
+                            <h4>=>Adding Very Important websites  of that topic</h4>	
+                            <h4>=>Adding Doubts section on that topic</h4>	
+                            <h4>=>Adding Notes on that topic</h4>	
+                            <h4>=>Adding Index of that topic</h4>	
+                        </div>
+                        <div class="image_div col-md-6 col-md-offset-2">
+                            <img class="img-responsive" src="images/technologies_banner.png" alt="technologies_banner" />
+                        </div>
+                        </div>'; /**/
+            } ?>
 
         <!-- <div class="distinct_topic">
 					<?php
