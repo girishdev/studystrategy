@@ -112,7 +112,21 @@ Priority Task First Because Of Interview:
     + Get Important Codes from CDI Web App
 
     - Mysql
-    + Copy Important Queries From CDI DB
+        + Copy Important Queries From CDI DB
+        1. Alter Tables Command
+        2. Change Password and Create New User
+        3. Data Type
+        4. Functions
+        5. Grant/Revoke/Privileges
+        6. Mysql Indexes
+        7. Procedures
+        8. Mysql Unique Constraint
+        9. Triggers
+        10. Cursor
+        11. Joins
+        12. Views
+        13. Mysql Full Text Search
+        14. Mysql Tips
 
     - VueJs / ReactJs
 
@@ -148,7 +162,32 @@ Database:
     englishword
     kannadaword
 
+WeekEnd Task:
+    1. Check all Mails
+        Gmail (Personal)
+        Office Mails
+   
+    2. Take a backup of StudyStrategy Every week
+    
+    3. Review Folders On Youttub, GDrive, GKeep, Pinterest, Hard Disk and etc...
+    
+    4. Review Time Table
+    
 
+Learning Points:
+    know how to write Batch Script
+    know how to write Sheel Script
+    know how to Work on Romote Server
+        FTC/SSH/WinSCP/filezilla
+        
+Update Job Portal:
+    1. Naukri, Monster, Shine and Other portal
+    
+    2. LinkedIn
+    
+    
+    
+    
 
 
 ";
