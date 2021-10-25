@@ -47,207 +47,14 @@ require_once('init/database.php');
             });
         });
     </script>
-
-    <style>
-        .navbar-inverse .navbar-brand {
-            padding: 5px 0px 5px 13px;
-            line-height: 40px;
-        }
-
-
-        /*
-        .subjectCount {
-            margin-bottom: 30px;
-            display: flex;
-        }
-
-        .actualCount {
-            text-align: right;
-            margin-right: 22px;
-        }
-
-        .subjectCount .topic {
-            width: 15%;
-            float: left;
-            border: 1px solid gray;
-            padding: 5px;
-            border-radius: 5%;
-            margin-right: 20px;
-            box-shadow: 0 -5px 5px rgba(55, 55, 55, 0.05),
-                inset 0 -5px 5px rgba(55, 55, 55, 0.05),
-                0 5px 5px rgba(0, 0, 0, 0.3), inset 0 5px 5px rgba(0, 0, 0, 0.3);
-        }
-
-        .topic-logo,
-        .topic-count {
-            width: 50%;
-        } /**/
-
-        .subjectCount .topic {
-            /* width: 15%; */
-            /* float: left; */
-            border: 1px solid gray;
-            padding: 5px;
-            border-radius: 5%;
-            margin-right: 20px;
-            box-shadow: 0 -5px 5px rgba(55, 55, 55, 0.05),
-                inset 0 -5px 5px rgba(55, 55, 55, 0.05),
-                0 5px 5px rgba(0, 0, 0, 0.3), inset 0 5px 5px rgba(0, 0, 0, 0.3);
-        }
-
-        .topic-logo,
-        .topic-count {
-            padding: 0px;
-        }
-
-        .topic-count {
-            text-align: center;
-        }
-
-        .topic-count span {
-            line-height: 3.5;
-            display: inline-block;
-            vertical-align: middle;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        .subjectCount .topic img {
-            width: 100%;
-            cursor: pointer;
-            text-align: center;
-        }
-
-        /**/
-    </style>
 </head>
 
 <body>
 
     <div class="container-fluid">
-
-        <nav class="navbar navbar-inverse">
-            <!-- navbar-default -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="main_page.php" class="home navbar-brand">StudyStrategy</a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="mainNavBar">
-                <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Programming<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="main_page.php?module=php">Php</a></li>
-                            <li><a href="main_page.php?module=python">Python</a></li>
-                            <li><a href="main_page.php?module=javascript">JavaScript</a></li>
-                            <li><a href="main_page.php?module=languagec">C</a></li>
-                            <li><a href="main_page.php?module=languagec++">C++</a></li>
-                            <li><a href="main_page.php?module=java">Java</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Database<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="main_page.php?module=mysql">Msql/DBMS</a></li>
-                            <li><a href="main_page.php?module=postgresql">Postgresql</a></li>
-                            <li><a href="main_page.php?module=mongo_db">MongoDB</a></li>
-                            <li><a href="main_page.php?module=maria_db">MariaDB</a></li>
-                            <li><a href="main_page.php?module=elastic_search">Elastic Search</a></li>
-                            <li><a href="main_page.php?module=redis">Redis</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Framework<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="main_page.php?module=wordpress">Wordpress</a></li>
-                            <li><a href="main_page.php?module=symfony">Symfony</a></li>
-                            <li><a href="main_page.php?module=laravel">Laravel</a></li>
-                            <li><a href="main_page.php?module=yii2">Yii2</a></li>
-                            <li><a href="main_page.php?module=codeigniter">Codeigniter</a></li>
-                            <li><a href="main_page.php?module=django">Django</a></li>
-                            <li><a href="main_page.php?module=reactjs">ReactJs</a></li>
-                            <li><a href="main_page.php?module=vuejs">VueJs</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown">Operating System<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="main_page.php?module=ubuntu">Ubuntu</a></li>
-                            <li><a href="main_page.php?module=windows">Windows</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown">Wed Developer<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="main_page.php?module=html">HTML</a></li>
-                            <li><a href="main_page.php?module=css">CSS</a></li>
-                            <li><a href="main_page.php?module=jquery">jQuery</a></li>
-                            <li><a href="main_page.php?module=ajax">Ajax</a></li>
-                            <li><a href="main_page.php?module=bootstrap">Bootstrap</a></li>
-                            <li><a href="main_page.php?module=admin_lt">AdminLT</a></li>
-                            <li><a href="main_page.php?module=material_ui">Material UI</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown">Tools<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="main_page.php?module=vs_code">VS Code</a></li>
-                            <li><a href="main_page.php?module=sublime">Sublime</a></li>
-                            <li><a href="main_page.php?module=jira">JIRA</a></li>
-                            <li><a href="main_page.php?module=jmeter">Jmeter</a></li>
-                            <li><a href="main_page.php?module=docker">Docker</a></li>
-                            <li><a href="main_page.php?module=postman">Postman</a></li>
-                            <li><a href="main_page.php?module=git">Git</a></li>
-                            <li><a href="main_page.php?module=agile_metho">Agile Metho</a></li>
-                            <li><a href="main_page.php?module=aws">AWS</a></li>
-                            <li><a href="main_page.php?module=google_cloude">google_cloude</a></li>
-                            <li><a href="main_page.php?module=azur">Azur</a></li>
-                            <li><a href="main_page.php?module=networking">Networking</a></li>
-                            <li><a href="main_page.php?module=algorithm">Algorithm</a></li>
-                            <li><a href="main_page.php?module=data_structures">Data structures</a></li>
-                            <li><a href="main_page.php?module=big_data">Big Data</a></li>
-                            <li><a href="main_page.php?module=info">Info</a></li>
-                            <li><a href="main_page.php?module=readme">Readme</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown">Personal Development<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="main_page.php?module=job">Job profile</a></li>
-                            <li><a href="main_page.php?module=imp_links">Imp Links</a></li>
-                            <li><a href="main_page.php?module=imp_noted">Imp Noted</a></li>
-                            <li><a href="main_page.php?module=doubts">Doubts</a></li>
-                            <li><a href="main_page.php?module=english">English</a></li>
-                            <li><a href="main_page.php?module=aptitude">Aptitude</a></li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a class="pull-right" href="main_page.php?module=add_topic">Add Topics</a></li>
-                    <li><a class="pull-right" id="logout" href="main_page.php?module=logout">Log out</a></li>
-                </ul>
-
-                <form class="navbar-form navbar-left" action="#">
-                    <div class="input-group">
-                        <input type="text" class="search-query form-control" name="search_for" placeholder="Search" />
-                        <div class="input-group-btn">
-                            <span class="input-group-btn">
-                                <button class="btn btn-primary" id="search_button" type="button">Search</button>
-                            </span>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </nav>
-
         <?php
+
+        require_once('files/navbar.php');
 
         if (isset($_REQUEST['module']) && !empty($_REQUEST['module'])) { ?>
             <div class="panel-body clearfix">
@@ -335,262 +142,117 @@ require_once('init/database.php');
                         require_once("http://www.w3schools.com/html/default.asp");
                         break;
                 } ?>
-            </div><?php
-                } else { ?>
-            <div class="panel-body" id="topic">
-                <div class="form_content col-md-12">
-                    <form id="myForm" method="post" action="select.php">
-                        <?php
-                        if (isset($_REQUEST['delete']) == 'delete') {
-                            echo 'Are you sure you want to delete';
-                            $org_sub = $_REQUEST['sub_topic'];
-                            $org_sub_sub = $_REQUEST['sub_sub_topic'];
-                            $org_url = $_REQUEST['url'];
-                            echo '<form action="main_page.php" method="POST">
-								<button type="submit" name="yes" value="YES" >YES</button>
-								<input type="text" name="" value=' . $org_sub . ' />
-								<input type="text" name="" value=' . $org_sub_sub . ' />
-								<input type="text" name="" value=' . $org_url . ' />
-								<button type="submit" name="no" value="NO" >NO</button>
-						  </form>';
-                            exit();
-                            $delete = $db->query("DELETE FROM study_list WHERE sub_topic='$org_sub' AND sub_sub_topic='$org_sub_sub' AND url='$org_url'");
-                            if ($delete == true) {
-                                echo 'Deleted Successfully...';
-                                // sleep(5);
-                                header("Refresh:2; url=main_page.php");
-
-                                // header("Location: main_page.php");
-                            } else {
-                                echo 'Delete Unsuccessfull...!';
-                            }
-                        } else { ?>
-                            <div class="subjectCount col-md-12">
-                                <?php
-                                $topics = ['laravel' => 200, 'php' => 350, 'yii' => 50, 'mysql' => 150, 'python' => 100];
-                                foreach ($topics as $topic => $count) { ?>
-                                    <div class="row col-md-2 topic <?= $topic ?>">
-                                        <div class="topic-logo col-md-6">
-                                            <img src="images/<?= $topic ?>.png" alt="<?= $topic ?>">
-                                        </div>
-                                        <div class="topic-count col-md-6">
-                                            <span>
-                                                <?= $topic ?>
-                                                <br>
-                                                <?= $count ?>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <!-- <div class="topic <?= $topic ?>">
-                                        <div class="topic-logo">
-                                            <img src="images/<?= $topic ?>.png" alt="<?= $topic ?>">
-                                        </div>
-                                        <div class="topic-count">
-                                            <span><?= $topic ?></span>
-                                            <div class="actualCount">
-                                                <span><?= $count ?></span>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                <?php
-                                }
-                                ?>
-                            </div>
-                            <div class="form-group">
-                                <?php $select = $db->query("SELECT DISTINCT main_topic FROM topics WHERE main_topic<>'' "); ?>
-                                <label for="maintopic">Main Topic: </label>
-                                <select name="select1" id="select1" class="form-control">
-                                    <option value="test">Select Topic</option>
-                                    <?php
-                                    while ($rows = $select->fetch_array()) { ?>
-                                        <option><?php echo strtoupper($rows['main_topic']); ?></option>
-                                    <?php } ?>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <div id="data_present2"></div>
-                            </div>
-                            <div class="form-group">
-                                <div id="data_present23"></div>
-                            </div>
-                            <?php if (isset($_REQUEST['move_to']) == 'move_to') {
+            </div>
+            <?php } else { ?>
+                <div class="panel-body" id="topic">
+                    <div class="form_content col-md-12">
+                        <form id="myForm" method="post" action="select.php">
+                            <?php
+                            if (isset($_REQUEST['delete']) == 'delete') {
+                                echo 'Are you sure you want to delete';
                                 $org_sub = $_REQUEST['sub_topic'];
                                 $org_sub_sub = $_REQUEST['sub_sub_topic'];
-                                $org_url = $_REQUEST['url']; ?>
-                                <div class="form-group">
-                                    <label for="url">URL: </label>
-                                    <input type="text" class="form-control" name="url" value="<?php echo $_REQUEST['url']; ?>" id="url" placeholder="Url" />
-                                    <input type="hidden" class="form-control" id="org_sub" name="org_sub" value="<?php echo $org_sub; ?>" id="url" placeholder="Url" />
-                                    <input type="hidden" class="form-control" id="org_sub_sub" name="org_sub_sub" value="<?php echo $org_sub_sub; ?>" id="url" placeholder="Url" />
-                                    <input type="hidden" class="form-control" id="org_url" name="org_url" value="<?php echo $org_url; ?>" id="url" placeholder="Url" />
+                                $org_url = $_REQUEST['url'];
+                                echo '<form action="main_page.php" method="POST">
+                                    <button type="submit" name="yes" value="YES" >YES</button>
+                                    <input type="text" name="" value=' . $org_sub . ' />
+                                    <input type="text" name="" value=' . $org_sub_sub . ' />
+                                    <input type="text" name="" value=' . $org_url . ' />
+                                    <button type="submit" name="no" value="NO" >NO</button>
+                            </form>';
+                                exit();
+                                $delete = $db->query("DELETE FROM study_list WHERE sub_topic='$org_sub' AND sub_sub_topic='$org_sub_sub' AND url='$org_url'");
+                                if ($delete == true) {
+                                    echo 'Deleted Successfully...';
+                                    // sleep(5);
+                                    header("Refresh:2; url=main_page.php");
+                                    // header("Location: main_page.php");
+                                } else {
+                                    echo 'Delete Unsuccessfull...!';
+                                }
+                            } else { ?>
+                                <div class="subjectCount col-md-12">
+                                    <?php
+                                    $selectDistintTopics = $db->query("SELECT main_topic as topic, COUNT(*) as count FROM study_list GROUP BY main_topic ");
+                                    while ($rows = $selectDistintTopics->fetch_array()) { ?>
+                                        <div class="row col-md-2 topic <?= strtolower($rows['topic']) ?>">
+                                            <div class="topic-logo col-md-6">
+                                                <img src="images/<?= strtolower($rows['topic']) ?>.png" alt="<?= $rows['topic'] ?>">
+                                            </div>
+                                            <div class="topic-count col-md-6">
+                                                <span>
+                                                    <?= strtoupper($rows['topic']) ?>
+                                                    <br>
+                                                    <?= $rows['count'] ?>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    <?php } ?>
                                 </div>
                                 <div class="form-group">
-                                    <label for="description">Description</label>
-                                    <textarea class="form-control" name="description" id="description" rows="3"><?php echo $_REQUEST['description']; ?></textarea>
+                                    <?php $select = $db->query("SELECT DISTINCT main_topic FROM topics WHERE main_topic<>'' "); ?>
+                                    <label for="maintopic">Main Topic: </label>
+                                    <select name="select1" id="select1" class="form-control">
+                                        <option value="test">Select Topic</option>
+                                        <?php
+                                        while ($rows = $select->fetch_array()) { ?>
+                                            <option><?php echo strtoupper($rows['main_topic']); ?></option>
+                                        <?php } ?>
+                                    </select>
                                 </div>
-                                <button type="button" id="submitformmovetoid" onclick="submitform_moveto()" name="add_topic" class="btn btn-default">Move</button>
-                            <?php } else {
-                            ?>
                                 <div class="form-group">
-                                    <label for="url">URL: </label>
-                                    <input type="text" class="form-control" name="url" id="url" placeholder="Url" />
+                                    <div id="data_present2"></div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="description">Description</label>
-                                    <textarea class="form-control" name="description" id="description" rows="3"></textarea>
+                                    <div id="data_present23"></div>
                                 </div>
-                                <button type="button" id="submitformid" onclick="submitform()" name="add_topic" class="btn btn-default">Save</button>
-                        <?php }
-                        } ?>
-                    </form>
-                    <div id="message"></div>
+                                <?php if (isset($_REQUEST['move_to']) == 'move_to') {
+                                    $org_sub = $_REQUEST['sub_topic'];
+                                    $org_sub_sub = $_REQUEST['sub_sub_topic'];
+                                    $org_url = $_REQUEST['url']; ?>
+                                    <div class="form-group">
+                                        <label for="url">URL: </label>
+                                        <input type="text" class="form-control" name="url" value="<?php echo $_REQUEST['url']; ?>" id="url" placeholder="Url" />
+                                        <input type="hidden" class="form-control" id="org_sub" name="org_sub" value="<?php echo $org_sub; ?>" id="url" placeholder="Url" />
+                                        <input type="hidden" class="form-control" id="org_sub_sub" name="org_sub_sub" value="<?php echo $org_sub_sub; ?>" id="url" placeholder="Url" />
+                                        <input type="hidden" class="form-control" id="org_url" name="org_url" value="<?php echo $org_url; ?>" id="url" placeholder="Url" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="description">Description</label>
+                                        <textarea class="form-control" name="description" id="description" rows="3"><?php echo $_REQUEST['description']; ?></textarea>
+                                    </div>
+                                    <button type="button" id="submitformmovetoid" onclick="submitform_moveto()" name="add_topic" class="btn btn-default">Move</button>
+                                <?php } else {
+                                ?>
+                                    <div class="form-group">
+                                        <label for="url">URL: </label>
+                                        <input type="text" class="form-control" name="url" id="url" placeholder="Url" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="description">Description</label>
+                                        <textarea class="form-control" name="description" id="description" rows="3"></textarea>
+                                    </div>
+                                    <button type="button" id="submitformid" onclick="submitform()" name="add_topic" class="btn btn-default">Save</button>
+                            <?php }
+                            } ?>
+                        </form>
+                        <div id="message"></div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="panel-body">
-                <?php require_once('files/urgent-topic.php'); ?>
-            </div>
-            <div class="panel-body" id="data_present4"></div>
+                <div class="panel-body">
+                    <?php require_once('files/urgent-topic.php'); ?>
+                </div>
+                <div class="panel-body" id="data_present4"></div>
 
-                <?php
-                /* echo '<div class="images col-md-12">
-                        <div class="action">
-                            <h4>=>Adding url of that topic</h4>	
-                            <h4>=>Adding Quiz links of that topic</h4>	
-                            <h4>=>Adding Very Important websites  of that topic</h4>	
-                            <h4>=>Adding Doubts section on that topic</h4>	
-                            <h4>=>Adding Notes on that topic</h4>	
-                            <h4>=>Adding Index of that topic</h4>	
-                        </div>
-                        <div class="image_div col-md-6 col-md-offset-2">
-                            <img class="img-responsive" src="images/technologies_banner.png" alt="technologies_banner" />
-                        </div>
-                        </div>'; /**/
+            <?php
             } ?>
 
-        <!-- <div class="distinct_topic">
-					<?php
-                    /* To select the index of php */
-                    // $select = $db->query("SELECT DISTINCT sub_topic, main_topic, sub_sub_topic, description, url FROM study_list order by main_topic DESC");
-
-                    ?>
-					<table>
-						<tr>
-							<th>Main Topic</th>
-							<th>Sub Topic</th>
-							<th>Sub Sub Topic</th>
-							<th>Description</th>
-							<th>Url</th>
-						</tr>
-						<?php
-                        // if($select){
-                        // while($row = $select->fetch_array()){
-                        // 	$main_topic = ucfirst($row["main_topic"]);
-                        // 	$sub_topic = ucfirst($row["sub_topic"]);
-                        // 	$sub_sub_topic = ucfirst($row["sub_sub_topic"]);
-                        // 	$description = ucfirst($row["description"]);
-                        // 	$url = ucfirst($row["url"]);
-                        ?>
-							<tr>
-								<td><?php //echo $main_topic; 
-                                    ?></td>
-								<td><?php //echo $sub_topic; 
-                                    ?></td>
-								<td><?php //echo $sub_sub_topic; 
-                                    ?></td>
-								<td><?php //echo $description; 
-                                    ?></td>
-								<td><?php //echo $url; 
-                                    ?></td>
-							</tr>
-							<?php
-                            // 	}
-                            // } else {
-                            // 	echo 'No...';
-                            // }
-                            ?>
-					</table>
-				</div> -->
-
-        <div class="index1 col-md-4 clearfix">
-            <?php
-            //$topic = 'php';
-            //echo '<h2><u>' . $topic . ' Index</u> -- topics Table</h2>';
-            /*$select = $db->query("SELECT DISTINCT sub_topic FROM topics WHERE main_topic='".$topic."' order by sub_topic ASC");
-					while($rows_sub = $select->fetch_array()){
-						$sub_topic = ucfirst($rows_sub['sub_topic']);
-						echo '<h4 style="color:#006400;">' . $sub_topic . '</h4>';
-						$select_sub = $db->query("SELECT DISTINCT sub_sub_topic FROM topics WHERE sub_topic='".$sub_topic."'");
-						while($rows_sub_sub = $select_sub->fetch_array()){
-							$sub_sub_topic = ucfirst($rows_sub_sub['sub_sub_topic']);
-							echo '<h5 style="color:#0000FF;">' . '==> ' . $sub_sub_topic . '</h5>';
-						}
-					}/**/
-
-            /* To select the index of php */
-            /*$select = $db->query("SELECT DISTINCT main_topic, sub_topic, sub_sub_topic FROM topics WHERE main_topic='php' ORDER BY sub_sub_topic ASC");
-					while($rows_sub = $select->fetch_array()){
-						$sub_sub_topic = ucfirst($rows_sub['sub_sub_topic']);
-						echo '<h4 style="color:#006400;">' . $sub_sub_topic . '</h4>';
-					}/**/
-
-            ?>
-        </div>
-
-        <div class='index2 col-md-4 clearfix'>
-            <?php
-            //$topic = 'php';
-            //echo '<h2><u>' . $topic . ' Index</u> -- study_list Table</h2>';
-            /*$select = $db->query("SELECT DISTINCT sub_topic FROM study_list WHERE main_topic='".$topic."' order by sub_topic ASC");
-					while($rows_sub = $select->fetch_array()){
-						$sub_topic = ucfirst($rows_sub['sub_topic']);
-						echo '<h4 style="color:#006400;">' . $sub_topic . '</h4>';
-						$select_sub = $db->query("SELECT DISTINCT sub_sub_topic FROM topics WHERE sub_topic='".$sub_topic."'");
-						while($rows_sub_sub = $select_sub->fetch_array()){
-							$sub_sub_topic = ucfirst($rows_sub_sub['sub_sub_topic']);
-							echo '<h5 style="color:#0000FF;">' . '==> ' . $sub_sub_topic . '</h5>';
-						}
-					}/**/
-
-            /* To select the index of php */
-            /*$select = $db->query("SELECT DISTINCT main_topic, sub_topic, sub_sub_topic FROM study_list WHERE main_topic='php' ORDER BY sub_sub_topic ASC");
-					while($rows_sub = $select->fetch_array()){
-						$sub_sub_topic = ucfirst($rows_sub['sub_sub_topic']);
-						echo '<h4 style="color:#006400;">' . $sub_sub_topic . '</h4>';
-					}/**/
-
-            /*mysqli_free_result($insert);
-					mysqli_free_result($select);
-					mysqli_free_result($delete);
-					mysqli_free_result($update);
-
-					mysqli_close($insert);
-					mysqli_close($select);
-					mysqli_close($delete);
-					mysqli_close($update);/**/
-
-            /*$flushtdbst = $db->query("FLUSH TABLE study_list");
-				    $flushtdbtp = $db->query("FLUSH TABLE topics");
-
-				    if($flushtdbst && $flushtdbtp) {
-				    	echo '<h3>Table is FLUSH....</h3>';
-				    } else {
-				    	echo 'Not flushed..';
-				    }
-					
-					$optimizedbst = $db->query("OPTIMIZE TABLE study_list");
-					$optimizedbst = $db->query("OPTIMIZE TABLE topics");
-
-				    if($optimizedbst && $optimizedbst) {
-				    	echo '<h3>Table is OPTIMIZE....</h3>';
-				    } else {
-				    	echo 'Not flushed..';
-				    }/**/
-
-            ob_end_flush();
-
-            ?>
-        </div>
+            <div class='index2 col-md-4 clearfix'>
+                <?php
+                ob_end_flush();
+                ?>
+            </div>
 
         <div id="message"></div>
         <div id="wait" style="display:none;width:69px;height:89px;border:1px solid black;position:absolute;top:50%;left:50%;padding:2px;"><img src='demo_wait.gif' width="64" height="64" /><br>Loading..</div>

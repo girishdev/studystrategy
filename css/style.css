@@ -3,7 +3,6 @@
 }
 .navbar{
 	border-radius: 0px;
-	//height: 40px;
 	min-height: 40px;
 }
 .navbar-header {
@@ -20,6 +19,10 @@
 	color: white;
 	padding: 5px 13px;
 }
+.navbar-inverse .navbar-brand {
+    padding: 5px 0px 5px 13px;
+    line-height: 40px;
+}
 .navbar-left {
 	margin: 2px 0px;
 }
@@ -29,10 +32,6 @@
 }
 .btn-primary {
 	border-radius: 3px !important;
-}
-
-.panel-body{
-	/* padding: 0px; commented because it is effective holde body sections */
 }
 
 .clearfix:after {
@@ -158,25 +157,9 @@ table tbody:nth-child(odd){
 	background: #abc;
 }
 
-/*
-table th:nth-last-child(1),
-table th:nth-last-child(2),
-table td:nth-last-child(1),
-table td:nth-last-child(2) {
-	width: 200px;
-	background: green;
-}
-
-table th, table td {
-	width: 40px;
-	background: red;
-}/**/
-
 #topic span, #sub_sub_topic h5 {
 	cursor: pointer;
 	color: green;
-	/* line-height: 40px; */
-    /* margin-left: 31px; */
 }
 #sub_sub_topic h5 {
     margin: 0px;
@@ -240,6 +223,39 @@ td .description, table {
 	vertical-align: middle;
 	text-decoration: underline;
 	color: green;
+}
+
+/* subjectCount */
+.subjectCount {
+    margin-bottom: 20px;
+}
+.subjectCount .topic {
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 5%;
+    margin-right: 20px;
+    box-shadow: 0 -5px 5px rgba(55, 55, 55, 0.05),
+        inset 0 -5px 5px rgba(55, 55, 55, 0.05),
+        0 5px 5px rgba(0, 0, 0, 0.3), inset 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+.topic-logo,
+.topic-count {
+    padding: 0px;
+}
+.topic-count {
+    text-align: center;
+}
+.topic-count span {
+    line-height: 3.5;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.subjectCount .topic img {
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
 }
 
 
