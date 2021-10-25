@@ -111,5 +111,21 @@ Database:
     englishword
     kannadaword
 
+Mysql
+25th-Oct to 31st-Oct
+
+Php and Laravel
+1st-Nov to 7th-Nov
+
+JavaScript and jQuery
+8th-Nov to 14th-Nov
+
+AWS / Ubuntu Server / SSH Commends
+15-Nov to 21-Nov
+
+
+
+
+
 ";
 echo '</pre>';
