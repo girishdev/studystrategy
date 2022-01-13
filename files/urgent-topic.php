@@ -192,4 +192,20 @@ echo "
         </div>
 
     </div>
+
+<div class="panel panel-default">
+        <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">5. important interview questions link</a>
+                    </h4>
+        </div>  
+            <div id="collapse5" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="col-left col-md-12">
+                        <a href="https://www.bestinterviewquestion.com/" target="blank">Best Interview Question link</a>
+                    </div>
+                </div>
+            </div>
+   
 </div>
+

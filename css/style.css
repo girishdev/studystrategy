@@ -267,3 +267,10 @@ td .description, table {
 	}
 	
 }
+.pull-right{
+    background-color:#337ab7;
+    border-radius: 5px;
+}
+#logout{
+    border-radius: ;
+}
