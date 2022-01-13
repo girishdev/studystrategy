@@ -169,5 +169,5 @@ We can plan for adding:
 		Total Count Of Important Links
 		Priority Settings
 
-        ";
+";
 echo '</pre>';
