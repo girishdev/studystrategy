@@ -8,6 +8,7 @@ session_start();
 //		die();
 //	}
 
+// This is just Testing from PhpStorm
 require_once('init/database.php');
 
 // http://192.168.43.1:8080/vendor/vrana/adminer/adminer/index.php?server=192.168.43.1%3A3306&username=root&db=study&select=study_list&columns%5B0%5D%5Bfun%5D=&columns%5B0%5D%5Bcol%5D=&where%5B0%5D%5Bcol%5D=&where%5B0%5D%5Bop%5D=%3D&where%5B0%5D%5Bval%5D=&order%5B0%5D=&limit=5000000000&text_length=100

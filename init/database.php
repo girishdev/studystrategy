@@ -7,8 +7,8 @@
     $Host = '127.0.0.1';
     // $Host = 'http://192.168.1.3';
     // $Host = gethostname();
-    $DB_Username = 'study';
-    $DB_Password = 'study123';
+    $DB_Username = 'root';
+    $DB_Password = 'Root@123';
     $Database = 'studystrategy';
     $db = new mysqli($Host,$DB_Username,$DB_Password,$Database);
     if($db->connect_errno){

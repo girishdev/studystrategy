@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="studytest@localhost">
-  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.39">
     <root id="1"/>
     <schema id="2" parent="1" name="studytest">
       <Current>1</Current>
-      <Visible>1</Visible>
     </schema>
     <schema id="3" parent="1" name="gcm"/>
     <schema id="4" parent="1" name="information_schema"/>
@@ -28,128 +27,5 @@
     <schema id="22" parent="1" name="wordpress"/>
     <schema id="23" parent="1" name="wordpress466"/>
     <schema id="24" parent="1" name="wp_myblog"/>
-    <table id="25" parent="2" name="dictionary"/>
-    <table id="26" parent="2" name="login_form"/>
-    <table id="27" parent="2" name="study_list"/>
-    <table id="28" parent="2" name="topics"/>
-    <column id="29" parent="25" name="ID">
-      <Position>1</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-    </column>
-    <column id="30" parent="25" name="englishword">
-      <Position>2</Position>
-      <DataType>varchar(50)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="31" parent="25" name="kannadaword">
-      <Position>3</Position>
-      <DataType>varchar(50)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <key id="32" parent="25" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>ID</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="33" parent="26" name="ID">
-      <Position>1</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-    </column>
-    <column id="34" parent="26" name="login_id">
-      <Position>2</Position>
-      <DataType>varchar(250)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="35" parent="26" name="password">
-      <Position>3</Position>
-      <DataType>varchar(250)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="36" parent="26" name="date">
-      <Position>4</Position>
-      <DataType>varchar(250)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="37" parent="26" name="time">
-      <Position>5</Position>
-      <DataType>varchar(250)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <key id="38" parent="26" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>ID</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="39" parent="27" name="ID">
-      <Position>1</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-    </column>
-    <column id="40" parent="27" name="main_topic">
-      <Position>2</Position>
-      <DataType>varchar(100)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="41" parent="27" name="sub_topic">
-      <Position>3</Position>
-      <DataType>varchar(250)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="42" parent="27" name="sub_sub_topic">
-      <Position>4</Position>
-      <DataType>varchar(100)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="43" parent="27" name="description">
-      <Position>5</Position>
-      <DataType>varchar(250)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="44" parent="27" name="url">
-      <Position>6</Position>
-      <DataType>varchar(250)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="45" parent="27" name="entered_on">
-      <Position>7</Position>
-      <DataType>varchar(250)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <key id="46" parent="27" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>ID</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="47" parent="28" name="ID">
-      <Position>1</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-    </column>
-    <column id="48" parent="28" name="main_topic">
-      <Position>2</Position>
-      <DataType>varchar(50)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="49" parent="28" name="sub_topic">
-      <Position>3</Position>
-      <DataType>varchar(250)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="50" parent="28" name="sub_sub_topic">
-      <Position>4</Position>
-      <DataType>varchar(250)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <key id="51" parent="28" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>ID</ColNames>
-      <Primary>1</Primary>
-    </key>
   </database-model>
 </dataSource>
